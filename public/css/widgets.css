@@ -1,0 +1,329 @@
+/* Widgets CSS: Simulated Payment Modal, Simulated Mailbox Drawer, Dark Mode Toggle */
+
+/* Dark Mode Switcher */
+.theme-toggle-btn {
+  background: none;
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 5px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text-main);
+  transition: all 0.2s;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--bg-secondary);
+  border-color: var(--primary-color);
+}
+
+/* Modal Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+/* Simulated Payment Modal */
+.payment-modal-card {
+  background-color: var(--modal-bg);
+  width: 100%;
+  max-width: 480px;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  animation: modalFadeIn 0.25s ease;
+}
+
+@keyframes modalFadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.modal-header {
+  padding: 18px 24px;
+  background-color: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header h3 {
+  font-size: 17px;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+
+.btn-modal-close {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: var(--text-muted);
+  cursor: pointer;
+}
+
+.payment-modal-body {
+  padding: 24px;
+}
+
+.payment-order-summary {
+  background-color: var(--bg-secondary);
+  padding: 14px 18px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.payment-summary-title {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.payment-summary-price {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--primary-color);
+}
+
+.payment-methods-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.payment-tab-btn {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--border-color);
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border-radius: 4px;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+.payment-tab-btn.active {
+  border-color: var(--primary-color);
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+}
+
+[data-theme="dark"] .payment-tab-btn.active {
+  background-color: #2b2745;
+  color: #b7a9ff;
+}
+
+/* Floating Simulated Mailbox Widget */
+.floating-mailbox-trigger {
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  box-shadow: 0 4px 18px rgba(98, 85, 165, 0.4);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 600;
+  z-index: 1500;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.floating-mailbox-trigger:hover {
+  transform: translateY(-2px);
+  background-color: var(--primary-hover);
+}
+
+.mailbox-badge {
+  background-color: #ff392b;
+  color: #ffffff;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 7px;
+  border-radius: 10px;
+}
+
+/* Simulated Mailbox Drawer */
+.mailbox-drawer-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+  z-index: 2500;
+  justify-content: flex-end;
+}
+
+.mailbox-drawer-overlay.open {
+  display: flex;
+}
+
+.mailbox-drawer {
+  width: 100%;
+  max-width: 520px;
+  height: 100%;
+  background-color: var(--bg-card);
+  border-left: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  animation: drawerSlideIn 0.3s ease;
+}
+
+@keyframes drawerSlideIn {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.drawer-header {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--border-color);
+  background-color: var(--bg-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.drawer-header h3 {
+  font-size: 17px;
+  color: var(--primary-color);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.drawer-body {
+  flex: 1;
+  overflow-y: auto;
+  padding: 16px;
+}
+
+.email-list-view {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.email-item-card {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 14px 16px;
+  background-color: var(--bg-card);
+  cursor: pointer;
+  transition: border-color 0.2s, background-color 0.2s;
+  position: relative;
+}
+
+.email-item-card.unread {
+  border-left: 4px solid var(--primary-color);
+  background-color: rgba(98, 85, 165, 0.03);
+}
+
+.email-item-card:hover {
+  border-color: var(--primary-color);
+}
+
+.email-item-sender {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--primary-color);
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.email-item-time {
+  font-size: 11px;
+  color: var(--text-muted);
+  font-weight: normal;
+}
+
+.email-item-subject {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--text-heading);
+  margin-bottom: 4px;
+}
+
+.email-item-preview {
+  font-size: 12px;
+  color: var(--text-muted);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Email Detail View inside drawer */
+.email-detail-view {
+  padding: 12px;
+}
+
+.btn-back-to-inbox {
+  background: none;
+  border: none;
+  color: var(--primary-color);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 16px;
+  font-size: 13px;
+}
+
+.email-detail-content {
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  padding: 20px;
+  background-color: var(--bg-card);
+}
+
+/* Toast Notifications */
+.toast-notification {
+  position: fixed;
+  bottom: 85px;
+  right: 25px;
+  background-color: #333333;
+  color: #ffffff;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  z-index: 3000;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+  display: none;
+  animation: modalFadeIn 0.2s ease;
+}
+
+.toast-notification.success {
+  background-color: #28a745;
+}
+
+.toast-notification.error {
+  background-color: #ff392b;
+}

@@ -1,0 +1,39 @@
+========================================================================================
+               SOFTWARE PROJECT MANAGEMENT (3171609) - LABORATORY MANUAL NOTES
+========================================================================================
+Subject           : Software Project Management
+GTU Code          : 3171609 (B.E. Semester VII - Information Technology)
+Institute         : Government Engineering College, Modasa (GTU Code: 021)
+Faculty Incharge  : Prof Nilesh D Goriya | Head of Dept: Prof S. A. Vahora
+Term Project      : NotesMarketplace Online Academic Platform
+========================================================================================
+
+PRACTICAL EXPERIMENT OUTLINE:
+----------------------------------------------------------------------------------------
+Practical 1 : Software Projects vs Other Types of Projects (Visibility, Complexity, Conformity)
+Practical 2 : Functional & Non-Functional Requirements Specification (SRS)
+Practical 3 : COCOMO Cost & Effort Estimation (Organic, Semi-Detached, Embedded)
+Practical 4 : Critical Path Method (CPM) Project Planning & Gantt Scheduling
+Practical 5 : Earned Value Analysis (EVA) Progress Tracking (PV, EV, AC, CPI, SPI)
+Practical 6 : Software Configuration Management (SCM) Objects Identification
+Practical 7 : Software Quality Assurance (SQA) Activities & Checkpoints
+Practical 8 : Project Closure Analysis Report & Financial Settlement
+Practical 9 : Full Prototype Implementation (NotesMarketplace Portal)
+Practical 10: Presentation and Viva Examination
+
+KEY FORMULAS & HIGHLIGHTS:
+1. COCOMO (Basic Model - Semi-Detached):
+   • Effort = a * (KLOC)^b = 3.0 * (113.65)^1.12 = 601.69 Person-Months
+   • Time   = c * (Effort)^d = 2.5 * (601.69)^0.35 = 23.48 Months
+   • Team   = Effort / Time = 601.69 / 23.48 ≈ 26 Developers
+
+2. Critical Path Method (CPM):
+   • Critical Path: A -> B -> C -> E -> F -> G -> I (Total Duration: 65 Days)
+   • Slack = LS - ES = LF - EF = 0 on the Critical Path.
+
+3. Earned Value Analysis (EVA):
+   • Cost Performance Index (CPI) = EV / AC = 34,000 / 36,000 = 0.94 (< 1: Over Budget)
+   • Schedule Performance Index (SPI) = EV / PV = 34,000 / 45,000 = 0.76 (< 1: Behind Schedule)
+   • Estimate at Completion (EAC) = BAC / CPI = 100,000 / 0.94 = ₹106,383
+
+Verified for Term Project Submission 2026-27.

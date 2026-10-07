@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 260" width="420" height="260">
+    <defs>
+      <linearGradient id="grad-coveraccountssvg" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="#701a75" />
+        <stop offset="60%" stop-color="#86198f" />
+        <stop offset="100%" stop-color="#0a0c16" />
+      </linearGradient>
+      <linearGradient id="spine-shade" x1="0%" y1="0%" x2="100%" y2="0%">
+        <stop offset="0%" stop-color="rgba(0,0,0,0.5)" />
+        <stop offset="25%" stop-color="rgba(255,255,255,0.12)" />
+        <stop offset="100%" stop-color="rgba(0,0,0,0.15)" />
+      </linearGradient>
+      <pattern id="dot-pattern" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+        <circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.08)" />
+      </pattern>
+    </defs>
+    
+    <!-- Background & Dot Mesh -->
+    <rect width="420" height="260" fill="url(#grad-coveraccountssvg)" rx="8" />
+    <rect width="420" height="260" fill="url(#dot-pattern)" rx="8" />
+
+    <!-- Book Spine 3D Effect -->
+    <rect x="0" y="0" width="18" height="260" fill="url(#spine-shade)" />
+    <line x1="18" y1="0" x2="18" y2="260" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" />
+
+    <!-- Inner Border Framing -->
+    <rect x="28" y="16" width="376" height="228" fill="none" stroke="rgba(255,255,255,0.18)" stroke-width="1.5" rx="6" />
+
+    <!-- Top Academic Ribbon -->
+    <rect x="28" y="16" width="376" height="38" fill="rgba(0,0,0,0.25)" />
+    <text x="44" y="39" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="800" fill="#f472b6" letter-spacing="2.5">NOTES MARKETPLACE</text>
+    <text x="388" y="39" font-family="monospace" font-size="10" font-weight="700" fill="rgba(255,255,255,0.6)" text-anchor="end">ACC-101</text>
+
+    <!-- Main Title & Subtitle -->
+    <text x="44" y="98" font-family="system-ui, -apple-system, sans-serif" font-size="21" font-weight="900" fill="#ffffff" letter-spacing="-0.3">Accounts & Finance</text>
+    <text x="44" y="124" font-family="system-ui, -apple-system, sans-serif" font-size="12" font-weight="500" fill="#cbd5e1">Corporate Financial Auditing & Accounting</text>
+
+    <!-- Divider Bar -->
+    <rect x="44" y="142" width="70" height="3" fill="#f472b6" rx="1.5" />
+
+    <!-- Category Pill Tag -->
+    <rect x="44" y="165" width="95" height="22" rx="4" fill="rgba(255,255,255,0.15)" stroke="rgba(255,255,255,0.25)" stroke-width="1" />
+    <text x="91" y="180" font-family="system-ui, -apple-system, sans-serif" font-size="9.5" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">COMMERCE</text>
+
+    <!-- Bottom Metadata Band -->
+    <rect x="28" y="210" width="376" height="34" fill="rgba(0,0,0,0.35)" />
+    <circle cx="44" cy="227" r="4" fill="#f472b6" />
+    <text x="56" y="231" font-family="system-ui, -apple-system, sans-serif" font-size="10" font-weight="600" fill="#f8fafc">VERIFIED CURRICULUM</text>
+    
+    <!-- Barcode simulation -->
+    <g transform="translate(320, 218)" fill="rgba(255,255,255,0.7)">
+      <rect x="0" y="0" width="2" height="18" />
+      <rect x="4" y="0" width="1" height="18" />
+      <rect x="7" y="0" width="3" height="18" />
+      <rect x="12" y="0" width="1" height="18" />
+      <rect x="15" y="0" width="2" height="18" />
+      <rect x="19" y="0" width="3" height="18" />
+      <rect x="24" y="0" width="1" height="18" />
+      <rect x="27" y="0" width="2" height="18" />
+      <rect x="31" y="0" width="4" height="18" />
+      <rect x="37" y="0" width="1" height="18" />
+      <rect x="40" y="0" width="2" height="18" />
+      <rect x="44" y="0" width="3" height="18" />
+    </g>
+  </svg>

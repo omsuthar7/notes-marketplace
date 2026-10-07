@@ -1,0 +1,105 @@
+========================================================================================
+                     NOTES MARKETPLACE - OFFICIAL ACADEMIC COURSE PACK
+========================================================================================
+Subject           : Computer Science & Operating Systems
+Course Code       : CS-248706 / SPM-3171609
+Institution       : University of California / GEC Modasa (GTU Code: 021)
+Instructor        : Prof. Richard Brown / Prof Nilesh D Goriya
+Verified Category : Computer Science & Engineering | Academic Year: 2026-27
+Quality Status    : ★★★★★ APPROVED BY SQA REVIEW BOARD (100+ Reviews)
+========================================================================================
+
+TABLE OF CONTENTS
+----------------------------------------------------------------------------------------
+Unit 1 : Advanced Processor Architecture & Memory Hierarchy
+Unit 2 : Process Scheduling, Synchronization & Deadlock Avoidance
+Unit 3 : Virtual Memory Management, Page Replacement & TLB
+Unit 4 : Algorithmic Complexity, Big-O Notation & Data Structures
+Unit 5 : Solved University Examination Papers & Viva Voice Preparation
+
+========================================================================================
+UNIT 1: ADVANCED PROCESSOR ARCHITECTURE & MEMORY SUBSYSTEM
+========================================================================================
+
+1.1 Von Neumann Architecture vs Harvard Architecture
+    • Von Neumann: Unified address bus and data bus for instructions and operands.
+      - Potential Bottleneck: "Von Neumann Bottleneck" (throughput limited by memory bus speed).
+    • Harvard Architecture: Physically separated storage and signal pathways for code and data.
+      - Advantage: Simultaneous instruction fetching and operand read/write cycles.
+
+1.2 Memory Hierarchy & Access Latency
+    ┌─────────────────────────────────┬──────────────────────┬──────────────────────┐
+    │ Memory Level                    │ Typical Capacity     │ Access Latency       │
+    ├─────────────────────────────────┼──────────────────────┼──────────────────────┤
+    │ CPU Registers                   │ 1 KB - 2 KB          │ 0.5 - 1 clock cycle  │
+    │ Level 1 Cache (L1 D-Cache/I-Cache) 64 KB - 128 KB      │ 1 - 2 ns (4 cycles)  │
+    │ Level 2 Cache (L2 Dedicated)    │ 512 KB - 2 MB        │ 3 - 5 ns (14 cycles) │
+    │ Level 3 Cache (L3 Shared)       │ 16 MB - 64 MB        │ 10 - 20 ns (50-70 cyc)│
+    │ Main Memory (DDR5 SDRAM)        │ 16 GB - 64 GB        │ 50 - 80 ns           │
+    │ NVMe Solid State Drive (M.2)    │ 1 TB - 4 TB          │ 10 - 25 µs           │
+    └─────────────────────────────────┴──────────────────────┴──────────────────────┘
+
+1.3 Cache Coherence Protocols
+    • MESI Protocol: Modified (M), Exclusive (E), Shared (S), Invalid (I).
+      Ensures hardware-level data integrity across multi-core processors.
+
+========================================================================================
+UNIT 2: PROCESS SCHEDULING, CONCURRENCY & DEADLOCK MITIGATION
+========================================================================================
+
+2.1 Process State Transition Diagram:
+         [New] ──> [Ready] <───(Time Quantum Expired)───┐
+                     │                                   │
+                 (Dispatch)                           (Running)
+                     │                                   │
+                     v                                   v
+                 [Running] ───(I/O or Event Wait)───> [Waiting/Blocked]
+                     │                                   │
+                  (Exit)                            (I/O Complete)
+                     v                                   │
+                [Terminated]                             v
+                                                      [Ready]
+
+2.2 CPU Scheduling Algorithms Compared:
+    1. First-Come, First-Served (FCFS): Non-preemptive, suffers from Convoy Effect.
+    2. Shortest Job First (SJF): Provably optimal average turnaround time; impossible to predict burst.
+    3. Round Robin (RR): Preemptive, ideal for time-sharing systems; performance depends on Quantum q.
+    4. Multi-Level Feedback Queue (MLFQ): Dynamic priority aging to prevent process starvation.
+
+2.3 Coffman's Four Necessary Conditions for Deadlock:
+    1. Mutual Exclusion: At least one unshareable resource.
+    2. Hold and Wait: Process holding at least one resource and requesting additional ones.
+    3. No Preemption: Resources cannot be forcibly expropriated from a holding process.
+    4. Circular Wait: A closed chain of processes P0 -> P1 -> ... -> Pn -> P0 exists.
+
+2.4 Dijkstra's Banker's Algorithm (Deadlock Avoidance):
+    • Safety Check: Ensures State is Safe before granting any resource request.
+    • Formula: Need[i][j] = Max[i][j] - Allocation[i][j]
+    • If Need <= Work, Work = Work + Allocation.
+
+========================================================================================
+SAMPLE EXAM QUESTION (SOLVED) - GTU PREVIOUS PAPER
+========================================================================================
+Question:
+Consider 5 processes P0 through P4 with Allocation, Max and Available matrices:
+Available = [3, 3, 2]
+Calculate the Safe Sequence.
+
+Step-by-Step Solution:
+1. Compute the Need Matrix (Need = Max - Allocation).
+2. For P1: Need = [1, 2, 2] <= Available [3, 3, 2] -> P1 executes.
+   New Available = [3, 3, 2] + Allocation(P1) [2, 0, 0] = [5, 3, 2].
+3. For P3: Need = [0, 1, 1] <= Available [5, 3, 2] -> P3 executes.
+   New Available = [5, 3, 2] + Allocation(P3) [2, 1, 1] = [7, 4, 3].
+4. For P4: Need = [4, 3, 1] <= Available [7, 4, 3] -> P4 executes.
+   New Available = [7, 4, 3] + Allocation(P4) [0, 0, 2] = [7, 4, 5].
+5. For P0: Need = [0, 0, 0] <= Available [7, 4, 5] -> P0 executes.
+   New Available = [7, 4, 5] + Allocation(P0) [0, 1, 0] = [7, 5, 5].
+6. For P2: Need = [6, 0, 0] <= Available [7, 5, 5] -> P2 executes.
+
+Resulting Safe Sequence: < P1, P3, P4, P0, P2 >. The system is in a SAFE STATE.
+
+========================================================================================
+[DOCUMENT NOTICE: Total Pages: 277 | Full notes include diagrams, code snippets, and review questions.]
+Verified by NotesMarketplace Academic Quality Board.
+========================================================================================

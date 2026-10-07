@@ -1,0 +1,59 @@
+:root {
+  /* Brand Colors matching screenshots */
+  --primary-color: #6255a5;
+  --primary-hover: #504489;
+  --primary-light: #f4f0ff;
+  --primary-border: #6255a5;
+  --accent-blue: #007bff;
+  --accent-green: #28a745;
+  --accent-green-hover: #218838;
+  --accent-red: #ff392b;
+  --accent-red-hover: #d32f2f;
+  --accent-yellow: #ffc107;
+  --accent-orange: #fd7e14;
+  --accent-gray: #6c757d;
+
+  /* Light Theme */
+  --bg-body: #ffffff;
+  --bg-card: #ffffff;
+  --bg-input: #ffffff;
+  --bg-secondary: #f4f5f8;
+  --bg-header: #ffffff;
+  --bg-hero-overlay: rgba(98, 85, 165, 0.85);
+  --bg-auth-overlay: rgba(98, 85, 165, 0.75);
+  --border-color: #e2e8f0;
+  --border-input: #d1d5db;
+  --border-input-focus: #6255a5;
+  --text-main: #333333;
+  --text-muted: #64748b;
+  --text-heading: #333333;
+  --text-card-meta: #718096;
+  --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  --card-shadow-hover: 0 10px 25px rgba(98, 85, 165, 0.15);
+  --modal-bg: #ffffff;
+  --table-stripe: #f8fafc;
+  --table-border: #e2e8f0;
+}
+
+[data-theme="dark"] {
+  /* Dark Theme */
+  --bg-body: #0d0f17;
+  --bg-card: #161926;
+  --bg-input: #1f2335;
+  --bg-secondary: #1a1d2d;
+  --bg-header: #131622;
+  --bg-hero-overlay: rgba(30, 24, 60, 0.92);
+  --bg-auth-overlay: rgba(20, 16, 45, 0.88);
+  --border-color: #2b3046;
+  --border-input: #373e5a;
+  --border-input-focus: #8b7bd9;
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --text-heading: #f8fafc;
+  --text-card-meta: #a0aec0;
+  --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  --card-shadow-hover: 0 10px 25px rgba(98, 85, 165, 0.35);
+  --modal-bg: #161926;
+  --table-stripe: #1c2030;
+  --table-border: #2b3046;
+}
